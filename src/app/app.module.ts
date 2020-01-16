@@ -8,6 +8,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { RestSampleComponent } from "./components/rest-sample/rest-sample.component";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RestSampleComponent } from "./components/rest-sample/rest-sample.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

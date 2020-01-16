@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { RestSampleService } from 'src/app/services/rest-sample.service';
 
 @Component({
   selector: "app-rest-sample",
@@ -7,9 +8,23 @@ import { Component, OnInit } from "@angular/core";
 })
 export class RestSampleComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private restSampleService: RestSampleService,
+  ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
+    this.loadSampleTodos();
+  }
+
+  private loadSampleTodos(): void {
+    let response;
+    this.restSampleService.getSampleTodos()
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log("get all shows failed");
+        }, () => {
+          console.log(JSON.stringify(response));
+        });
   }
 
 }
