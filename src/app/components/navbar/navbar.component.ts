@@ -1,15 +1,22 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
   selector: "app-navbar",
   templateUrl: "./navbar.component.html",
   styleUrls: ["./navbar.component.css"]
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
-  constructor() { }
+  constructor(
+    private navHelper: NavHelperService,
+  ) { }
 
-  ngOnInit() {
+  public goToDashboard(): void {
+    this.navHelper.goToDashboard();
   }
 
+  public goToInfo(): void {
+    this.navHelper.goToInfo();
+  }
 }
