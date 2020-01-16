@@ -1,1 +1,27 @@
-<p>rest-sample works!</p>
+<div class="header">
+  <h1>
+    Rest Sample
+  </h1>
+</div>
+<div class="content">
+  <p>
+    Here are sample todos loaded from
+    https://jsonplaceholder.typicode.com/todos.
+  </p>
+  <ul *ngIf="ready; else loading">
+    <ng-container *ngFor="let todo of todos">
+      <li>
+        <strong>
+          {{ todo.title }}
+        </strong>
+        |
+        <span *ngIf="todo.completed">complete</span>
+        <span *ngIf="!todo.completed">incomplete</span>
+      </li>
+    </ng-container>
+  </ul>
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RestSampleService } from "src/app/services/rest-sample.service";
+import { Todo } from 'src/app/models/Todo.model';
 
 @Component({
   selector: "app-rest-sample",
@@ -7,6 +8,12 @@ import { RestSampleService } from "src/app/services/rest-sample.service";
   styleUrls: ["./rest-sample.component.css"]
 })
 export class RestSampleComponent implements OnInit {
+
+  public todos: Todo[] = null;
+
+  public get ready(): boolean {
+    return this.todos !== null;
+  }
 
   constructor(
     private restSampleService: RestSampleService,
@@ -17,13 +24,10 @@ export class RestSampleComponent implements OnInit {
   }
 
   private loadSampleTodos(): void {
-    let response;
     this.restSampleService.getSampleTodos()
-      .subscribe((res) => response = res,
+      .subscribe((res) => this.todos = res,
         (error) => {
           console.log("get all shows failed");
-        }, () => {
-          console.log(JSON.stringify(response));
         });
   }
 
