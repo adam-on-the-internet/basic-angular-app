@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RestSampleService } from "src/app/services/rest-sample.service";
-import { Todo } from 'src/app/models/Todo.model';
+import { Todo } from "src/app/models/Todo.model";
 
 @Component({
   selector: "app-rest-sample",
