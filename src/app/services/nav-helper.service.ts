@@ -17,4 +17,8 @@ export class NavHelperService {
   public goToInfo(): void {
     this.router.navigate(["info"]);
   }
+
+  public goToRestSample(): void {
+    this.router.navigate(["rest-sample"]);
+  }
 }

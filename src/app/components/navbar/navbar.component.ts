@@ -19,4 +19,8 @@ export class NavbarComponent {
   public goToInfo(): void {
     this.navHelper.goToInfo();
   }
+
+  public goToRestSample(): void {
+    this.navHelper.goToRestSample();
+  }
 }
