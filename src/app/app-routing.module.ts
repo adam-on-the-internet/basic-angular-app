@@ -4,11 +4,13 @@ import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { InfoComponent } from "./components/info/info.component";
 import { RestSampleComponent } from "./components/rest-sample/rest-sample.component";
 import { ROUTES_ENUM } from "./constants/routing.constants";
+import { FormSampleComponent } from "./components/form-sample/form-sample.component";
 
 const routes: Routes = [
   { path: ROUTES_ENUM.Dashboard, component: DashboardComponent },
   { path: ROUTES_ENUM.Info, component: InfoComponent },
   { path: ROUTES_ENUM.RestSample, component: RestSampleComponent },
+  { path: ROUTES_ENUM.FormSample, component: FormSampleComponent },
   { path: "**", redirectTo: "dashboard" },
 ];
 

@@ -23,4 +23,8 @@ export class NavbarComponent {
   public goToRestSample(): void {
     this.navHelper.goToRestSample();
   }
+
+  public goToFormSample(): void {
+    this.navHelper.goToFormSample();
+  }
 }

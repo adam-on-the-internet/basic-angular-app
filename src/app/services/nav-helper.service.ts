@@ -22,4 +22,8 @@ export class NavHelperService {
   public goToRestSample(): void {
     this.router.navigate([ROUTES_ENUM.RestSample]);
   }
+
+  public goToFormSample(): void {
+    this.router.navigate([ROUTES_ENUM.FormSample]);
+  }
 }

@@ -9,6 +9,7 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { RestSampleComponent } from "./components/rest-sample/rest-sample.component";
 import { HttpClientModule } from "@angular/common/http";
+import { FormSampleComponent } from "./components/form-sample/form-sample.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from "@angular/common/http";
     InfoComponent,
     NavbarComponent,
     FooterComponent,
-    RestSampleComponent
+    RestSampleComponent,
+    FormSampleComponent
   ],
   imports: [
     BrowserModule,
