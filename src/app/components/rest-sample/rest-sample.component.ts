@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { RestSampleService } from 'src/app/services/rest-sample.service';
+import { RestSampleService } from "src/app/services/rest-sample.service";
 
 @Component({
   selector: "app-rest-sample",
