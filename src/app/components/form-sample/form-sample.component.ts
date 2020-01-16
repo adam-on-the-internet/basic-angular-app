@@ -1,15 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-form-sample",
   templateUrl: "./form-sample.component.html",
   styleUrls: ["./form-sample.component.css"]
 })
-export class FormSampleComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class FormSampleComponent {
+  public sampleText: string = null;
 }
