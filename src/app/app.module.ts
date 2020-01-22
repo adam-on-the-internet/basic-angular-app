@@ -11,6 +11,7 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { RestSampleComponent } from "./components/rest-sample/rest-sample.component";
 import { HttpClientModule } from "@angular/common/http";
 import { FormSampleComponent } from "./components/form-sample/form-sample.component";
+import { WidgetDisplayComponent } from './components/widget-display/widget-display.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormSampleComponent } from "./components/form-sample/form-sample.compon
     NavbarComponent,
     FooterComponent,
     RestSampleComponent,
-    FormSampleComponent
+    FormSampleComponent,
+    WidgetDisplayComponent
   ],
   imports: [
     BrowserModule,

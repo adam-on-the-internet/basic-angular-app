@@ -1,0 +1,10 @@
+<p [title]="widget.description">
+  <strong> {{ widget.name }} ({{ widget.type }}) </strong>
+  |
+  <span *ngIf="widget.used">used</span>
+  <span *ngIf="!widget.used">new</span>
+  |
+  <span>Age: {{ widget.age }}</span>
+  |
+  <small>id #{{ widget.id }}</small>
+</p>

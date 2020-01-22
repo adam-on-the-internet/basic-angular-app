@@ -7,18 +7,11 @@
   <p>
     Here are widgets loaded from my Basic Express App.
   </p>
-  <ul *ngIf="ready; else notReady">
+  <ng-container *ngIf="ready; else notReady">
     <ng-container *ngFor="let widget of widgetResource.widgets">
-      <li [title]="widget.description">
-        <strong> {{ widget.name }} ({{ widget.type }}) </strong>
-        |
-        <span *ngIf="widget.used">used</span>
-        <span *ngIf="!widget.used">new</span>
-        |
-        <small>id #{{ widget.id }}</small>
-      </li>
+      <app-widget-display [widget]="widget"></app-widget-display>
     </ng-container>
-  </ul>
+  </ng-container>
 </div>
 
 <ng-template #notReady>
