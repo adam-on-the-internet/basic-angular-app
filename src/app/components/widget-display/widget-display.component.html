@@ -1,4 +1,4 @@
-<p [title]="widget.description">
+<p [title]="widget.description" *ngIf="show">
   <strong> {{ widget.name }} ({{ widget.type }}) </strong>
   |
   <span *ngIf="widget.used">used</span>

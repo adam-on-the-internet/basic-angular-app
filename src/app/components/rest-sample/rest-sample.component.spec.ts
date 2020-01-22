@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { RestSampleComponent } from "./rest-sample.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { WidgetDisplayComponent } from "../widget-display/widget-display.component";
 
 describe("RestSampleComponent", () => {
   let component: RestSampleComponent;
@@ -9,7 +10,7 @@ describe("RestSampleComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [RestSampleComponent],
+      declarations: [RestSampleComponent, WidgetDisplayComponent],
       imports: [HttpClientTestingModule]
     })
       .compileComponents();
