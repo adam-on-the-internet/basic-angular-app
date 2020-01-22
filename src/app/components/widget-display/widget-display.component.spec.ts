@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WidgetDisplayComponent } from './widget-display.component';
+import { WidgetDisplayComponent } from "./widget-display.component";
 
-describe('WidgetDisplayComponent', () => {
+describe("WidgetDisplayComponent", () => {
   let component: WidgetDisplayComponent;
   let fixture: ComponentFixture<WidgetDisplayComponent>;
 
@@ -19,7 +19,7 @@ describe('WidgetDisplayComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
