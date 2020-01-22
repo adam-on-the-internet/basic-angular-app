@@ -3,6 +3,7 @@ export interface Widget {
   id: string;
   type: string;
   description: string;
+  age: number;
   used: boolean;
 }
 
