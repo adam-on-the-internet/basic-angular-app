@@ -7,21 +7,18 @@
   <p>
     Here are widgets loaded from my Basic Express App.
   </p>
-  <div *ngIf="ready; else notReady">
-    {{widgetResource | json}}
-  </div>
-  <!-- <ul *ngIf="ready; else loading">
-    <ng-container *ngFor="let todo of todos">
-      <li>
-        <strong>
-          {{ todo.title }}
-        </strong>
+  <ul *ngIf="ready; else notReady">
+    <ng-container *ngFor="let widget of widgetResource.widgets">
+      <li [title]="widget.description">
+        <strong> {{ widget.name }} ({{ widget.type }}) </strong>
         |
-        <span *ngIf="todo.completed">complete</span>
-        <span *ngIf="!todo.completed">incomplete</span>
+        <span *ngIf="widget.used">used</span>
+        <span *ngIf="!widget.used">new</span>
+        |
+        <small>id #{{ widget.id }}</small>
       </li>
     </ng-container>
-  </ul> -->
+  </ul>
 </div>
 
 <ng-template #notReady>

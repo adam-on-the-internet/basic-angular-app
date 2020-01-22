@@ -13,6 +13,6 @@ export class RestSampleService {
   ) { }
 
   public getWidgets(): Observable<WidgetResource> {
-    return this.http.get("https://aoti-basic-express-app.herokuapp.com/") as Observable<WidgetResource>;
+    return this.http.get("https://aoti-basic-express-app.herokuapp.com/widget") as Observable<WidgetResource>;
   }
 }
