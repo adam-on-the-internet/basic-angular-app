@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RestSampleService } from "src/app/services/rest-sample.service";
-import { Todo } from "src/app/models/Todo.model";
+import { WidgetResource } from "../../models/Widget.model";
 
 @Component({
   selector: "app-rest-sample",
@@ -9,10 +9,11 @@ import { Todo } from "src/app/models/Todo.model";
 })
 export class RestSampleComponent implements OnInit {
 
-  public todos: Todo[] = null;
+  public widgetResource: WidgetResource = null;
+  public error = false;
 
   public get ready(): boolean {
-    return this.todos !== null;
+    return this.widgetResource !== null;
   }
 
   constructor(
@@ -20,14 +21,17 @@ export class RestSampleComponent implements OnInit {
   ) { }
 
   public ngOnInit() {
-    this.loadSampleTodos();
+    this.loadWidgets();
   }
 
-  private loadSampleTodos(): void {
-    this.restSampleService.getSampleTodos()
-      .subscribe((res) => this.todos = res,
+  private loadWidgets(): void {
+    this.widgetResource = null;
+    this.error = false;
+    this.restSampleService.getWidgets()
+      .subscribe((res) => this.widgetResource = res,
         (error) => {
-          console.log("get all shows failed");
+          this.error = true;
+          console.log("get widgets failed");
         });
   }
 

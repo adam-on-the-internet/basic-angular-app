@@ -5,10 +5,12 @@
 </div>
 <div class="content">
   <p>
-    Here are sample todos loaded from
-    https://jsonplaceholder.typicode.com/todos.
+    Here are widgets loaded from my Basic Express App.
   </p>
-  <ul *ngIf="ready; else loading">
+  <div *ngIf="ready; else notReady">
+    {{widgetResource | json}}
+  </div>
+  <!-- <ul *ngIf="ready; else loading">
     <ng-container *ngFor="let todo of todos">
       <li>
         <strong>
@@ -19,9 +21,10 @@
         <span *ngIf="!todo.completed">incomplete</span>
       </li>
     </ng-container>
-  </ul>
+  </ul> -->
 </div>
 
-<ng-template #loading>
-  <p>Loading...</p>
+<ng-template #notReady>
+  <p *ngIf="error">Error occured :(</p>
+  <p *ngIf="!error">Loading...</p>
 </ng-template>
