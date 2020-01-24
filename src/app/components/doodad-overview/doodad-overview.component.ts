@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { DoodadResource } from 'src/app/models/Doodad.model';
-import { DoodadService } from '../../services/doodad.service';
+import { DoodadResource } from "src/app/models/Doodad.model";
+import { DoodadService } from "../../services/doodad.service";
 
 @Component({
   selector: "app-doodad-overview",

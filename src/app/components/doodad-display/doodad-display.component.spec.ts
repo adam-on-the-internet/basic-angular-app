@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { DoodadDisplayComponent } from './doodad-display.component';
+import { DoodadDisplayComponent } from "./doodad-display.component";
 
-describe('DoodadDisplayComponent', () => {
+describe("DoodadDisplayComponent", () => {
   let component: DoodadDisplayComponent;
   let fixture: ComponentFixture<DoodadDisplayComponent>;
 
@@ -19,7 +19,7 @@ describe('DoodadDisplayComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
