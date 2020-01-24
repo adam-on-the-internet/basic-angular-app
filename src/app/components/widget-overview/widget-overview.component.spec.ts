@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { WidgetOverviewComponent } from "./widget-overview.component";
+import { WidgetDisplayComponent } from "../widget-display/widget-display.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
 describe("WidgetOverviewComponent", () => {
   let component: WidgetOverviewComponent;
@@ -8,9 +10,10 @@ describe("WidgetOverviewComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WidgetOverviewComponent ]
+      declarations: [WidgetOverviewComponent, WidgetDisplayComponent],
+      imports: [HttpClientTestingModule],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
