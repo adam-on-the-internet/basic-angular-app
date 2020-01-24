@@ -1,0 +1,10 @@
+<p [title]="doodad.description" *ngIf="show">
+  <strong> {{ doodad.name }} ({{ doodad.type }}) </strong>
+  |
+  <span *ngIf="doodad.used">used</span>
+  <span *ngIf="!doodad.used">new</span>
+  |
+  <span>Age: {{ doodad.age }}</span>
+  |
+  <small>id #{{ doodad.id }}</small>
+</p>

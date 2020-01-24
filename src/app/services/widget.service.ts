@@ -8,8 +8,7 @@ import { ServiceUrl } from "../constants/rest.constants";
 @Injectable({
   providedIn: "root"
 })
-export class RestSampleService {
-
+export class WidgetService {
   constructor(
     private http: HttpClient,
   ) { }

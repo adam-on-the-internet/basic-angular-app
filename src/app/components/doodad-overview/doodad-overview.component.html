@@ -1,1 +1,20 @@
-<p>doodad-overview works!</p>
+<div class="header">
+  <h1>
+    Doodad Overview
+  </h1>
+</div>
+<div class="content">
+  <p>
+    Here are doodads loaded from my Basic Express App and Basic Mongo Cluster.
+  </p>
+  <ng-container *ngIf="ready; else notReady">
+    <ng-container *ngFor="let doodad of doodadResource.doodads">
+      <app-doodad-display [doodad]="doodad"></app-doodad-display>
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-template #notReady>
+  <p *ngIf="error">Error occured :(</p>
+  <p *ngIf="!error">Loading...</p>
+</ng-template>
