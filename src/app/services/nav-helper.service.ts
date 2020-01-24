@@ -26,4 +26,12 @@ export class NavHelperService {
   public goToFormSample(): void {
     this.router.navigate([ROUTES_ENUM.FormSample]);
   }
+
+  public goToWidgetOverview(): void {
+    this.router.navigate([ROUTES_ENUM.WidgetOverview]);
+  }
+
+  public goToDoodadOverview(): void {
+    this.router.navigate([ROUTES_ENUM.DoodadOverview]);
+  }
 }

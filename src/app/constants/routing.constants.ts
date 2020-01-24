@@ -3,4 +3,6 @@ export const enum ROUTES_ENUM {
   Info = "info",
   RestSample = "rest-sample",
   FormSample = "form-sample",
+  WidgetOverview = "widget-overview",
+  DoodadOverview = "doodad-overview",
 }

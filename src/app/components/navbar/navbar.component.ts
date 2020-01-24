@@ -27,4 +27,12 @@ export class NavbarComponent {
   public goToFormSample(): void {
     this.navHelper.goToFormSample();
   }
+
+  public goToWidgetOverview(): void {
+    this.navHelper.goToWidgetOverview();
+  }
+
+  public goToDoodadOverview(): void {
+    this.navHelper.goToDoodadOverview();
+  }
 }

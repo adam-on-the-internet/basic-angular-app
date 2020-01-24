@@ -12,6 +12,8 @@ import { RestSampleComponent } from "./components/rest-sample/rest-sample.compon
 import { HttpClientModule } from "@angular/common/http";
 import { FormSampleComponent } from "./components/form-sample/form-sample.component";
 import { WidgetDisplayComponent } from "./components/widget-display/widget-display.component";
+import { WidgetOverviewComponent } from "./components/widget-overview/widget-overview.component";
+import { DoodadOverviewComponent } from "./components/doodad-overview/doodad-overview.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { WidgetDisplayComponent } from "./components/widget-display/widget-displ
     FooterComponent,
     RestSampleComponent,
     FormSampleComponent,
-    WidgetDisplayComponent
+    WidgetDisplayComponent,
+    WidgetOverviewComponent,
+    DoodadOverviewComponent
   ],
   imports: [
     BrowserModule,
