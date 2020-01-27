@@ -7,17 +7,5 @@
   <p>
     Here are doodads loaded from my Basic Express App and Basic Mongo Cluster.
   </p>
-  <button (click)="createDoodad()">
-    Create Doodad
-  </button>
-  <ng-container *ngIf="ready; else notReady">
-    <ng-container *ngFor="let doodad of doodadResource.doodads">
-      <app-doodad-display [doodad]="doodad"></app-doodad-display>
-    </ng-container>
-  </ng-container>
+  <app-doodad-table></app-doodad-table>
 </div>
-
-<ng-template #notReady>
-  <p *ngIf="error">Error occured :(</p>
-  <p *ngIf="!error">Loading...</p>
-</ng-template>

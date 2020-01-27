@@ -15,8 +15,10 @@ const routes: Routes = [
   { path: ROUTES_ENUM.FormSample, component: FormSampleComponent },
   { path: ROUTES_ENUM.WidgetOverview, component: WidgetOverviewComponent },
   { path: ROUTES_ENUM.WidgetForm, component: WidgetFormComponent },
+  { path: ROUTES_ENUM.WidgetForm + "/:widgetId", component: WidgetFormComponent },
   { path: ROUTES_ENUM.DoodadOverview, component: DoodadOverviewComponent },
   { path: ROUTES_ENUM.DoodadForm, component: DoodadFormComponent },
+  { path: ROUTES_ENUM.DoodadForm + "/:doodadId", component: DoodadFormComponent },
   { path: "**", redirectTo: "dashboard" },
 ];
 
