@@ -1,1 +1,13 @@
-<p>doodad-form works!</p>
+<ng-container *ngIf="ready; else notReady">
+  <h1>
+    <span *ngIf="editMode">Edit Doodad</span>
+    <span *ngIf="!editMode">Create Doodad</span>
+  </h1>
+  <p>
+    Coming soon...
+  </p>
+</ng-container>
+
+<ng-template #notReady>
+  <p>Loading...</p>
+</ng-template>

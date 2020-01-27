@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from '@angular/router';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
-import { Widget } from 'src/app/models/Widget.model';
+import { ActivatedRoute } from "@angular/router";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { Widget } from "src/app/models/Widget.model";
 
 @Component({
   selector: "app-widget-form",
@@ -28,7 +28,7 @@ export class WidgetFormComponent implements OnInit {
   }
 
   private setupForm() {
-    const urlId = this.route.snapshot.paramMap.get('id');
+    const urlId = this.route.snapshot.paramMap.get("id");
     if (BooleanHelper.notNull(urlId)) {
       this.setupEditForm(urlId);
     } else {
