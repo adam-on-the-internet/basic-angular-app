@@ -21,11 +21,11 @@ export class WidgetService {
     return this.http.get(url) as Observable<WidgetResource>;
   }
 
-  public getSingleWidget(widgetId: number): Observable<Widget> {
+  public getSingleWidget(widgetId: string): Observable<Widget> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
       controller: "widget",
-      params: widgetId.toString(),
+      params: widgetId,
     });
     return this.http.get(url) as Observable<Widget>;
   }
@@ -46,11 +46,11 @@ export class WidgetService {
     return this.http.put(url, widget) as Observable<any>;
   }
 
-  public deleteWidget(widgetId: number): Observable<any> {
+  public deleteWidget(widgetId: string): Observable<any> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
       controller: "widget",
-      params: widgetId.toString(),
+      params: widgetId,
     });
     return this.http.delete(url) as Observable<any>;
   }

@@ -16,7 +16,8 @@ import { DoodadOverviewComponent } from "./components/doodad-overview/doodad-ove
 import { DoodadDisplayComponent } from "./components/doodad-display/doodad-display.component";
 import { WidgetFormComponent } from "./components/widget-form/widget-form.component";
 import { DoodadFormComponent } from "./components/doodad-form/doodad-form.component";
-import { DoodadTableComponent } from './components/doodad-table/doodad-table.component';
+import { DoodadTableComponent } from "./components/doodad-table/doodad-table.component";
+import { WidgetTableComponent } from "./components/widget-table/widget-table.component";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DoodadTableComponent } from './components/doodad-table/doodad-table.com
     DoodadDisplayComponent,
     WidgetFormComponent,
     DoodadFormComponent,
-    DoodadTableComponent
+    DoodadTableComponent,
+    WidgetTableComponent
   ],
   imports: [
     BrowserModule,

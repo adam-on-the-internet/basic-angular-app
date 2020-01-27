@@ -1,24 +1,23 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WidgetOverviewComponent } from "./widget-overview.component";
+import { WidgetTableComponent } from "./widget-table.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
-import { WidgetTableComponent } from "../widget-table/widget-table.component";
 import { RouterTestingModule } from "@angular/router/testing";
 
-describe("WidgetOverviewComponent", () => {
-  let component: WidgetOverviewComponent;
-  let fixture: ComponentFixture<WidgetOverviewComponent>;
+describe("WidgetTableComponent", () => {
+  let component: WidgetTableComponent;
+  let fixture: ComponentFixture<WidgetTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [WidgetOverviewComponent, WidgetTableComponent],
-      imports: [HttpClientTestingModule, RouterTestingModule],
+      declarations: [WidgetTableComponent],
+      imports: [HttpClientTestingModule, RouterTestingModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WidgetOverviewComponent);
+    fixture = TestBed.createComponent(WidgetTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

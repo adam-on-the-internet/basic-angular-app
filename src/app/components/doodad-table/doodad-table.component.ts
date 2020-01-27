@@ -4,9 +4,9 @@ import { DoodadService } from "../../services/doodad.service";
 import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
-  selector: 'app-doodad-table',
-  templateUrl: './doodad-table.component.html',
-  styleUrls: ['./doodad-table.component.css']
+  selector: "app-doodad-table",
+  templateUrl: "./doodad-table.component.html",
+  styleUrls: ["./doodad-table.component.css"]
 })
 export class DoodadTableComponent implements OnInit {
   public doodadResource: DoodadResource = null;

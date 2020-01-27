@@ -1,8 +1,9 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { DoodadOverviewComponent } from "./doodad-overview.component";
-import { DoodadDisplayComponent } from "../doodad-display/doodad-display.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { DoodadTableComponent } from "../doodad-table/doodad-table.component";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe("DoodadOverviewComponent", () => {
   let component: DoodadOverviewComponent;
@@ -10,8 +11,8 @@ describe("DoodadOverviewComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DoodadOverviewComponent, DoodadDisplayComponent],
-      imports: [HttpClientTestingModule],
+      declarations: [DoodadOverviewComponent, DoodadOverviewComponent, DoodadTableComponent],
+      imports: [HttpClientTestingModule, RouterTestingModule],
     })
       .compileComponents();
   }));
