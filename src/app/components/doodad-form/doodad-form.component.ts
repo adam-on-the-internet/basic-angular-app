@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
 import { Doodad } from "src/app/models/Doodad.model";
+import { DoodadService } from 'src/app/services/doodad.service';
 
 @Component({
   selector: "app-doodad-form",
@@ -21,6 +22,7 @@ export class DoodadFormComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private doodadService: DoodadService,
   ) { }
 
   public ngOnInit() {
@@ -37,14 +39,11 @@ export class DoodadFormComponent implements OnInit {
   }
 
   private setupEditForm(id: string): void {
-    this.doodad = {
-      name: null,
-      _id: id,
-      type: null,
-      description: null,
-      age: null,
-      used: false,
-    };
+    this.doodadService.getSingleDoodad(id)
+      .subscribe((res) => this.doodad = res,
+        (error) => {
+          console.log("get doodad failed");
+        });
   }
 
   private setupCreateForm(): void {

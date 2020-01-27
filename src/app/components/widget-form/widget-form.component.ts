@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
 import { Widget } from "src/app/models/Widget.model";
+import { WidgetService } from 'src/app/services/widget.service';
 
 @Component({
   selector: "app-widget-form",
@@ -21,6 +22,7 @@ export class WidgetFormComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private widgetService: WidgetService,
   ) { }
 
   public ngOnInit() {
@@ -37,14 +39,11 @@ export class WidgetFormComponent implements OnInit {
   }
 
   private setupEditForm(id: string): void {
-    this.widget = {
-      name: null,
-      _id: id,
-      type: null,
-      description: null,
-      age: null,
-      used: false,
-    };
+    this.widgetService.getSingleWidget(id)
+      .subscribe((res) => this.widget = res,
+        (error) => {
+          console.log("get widget failed");
+        });
   }
 
   private setupCreateForm(): void {
