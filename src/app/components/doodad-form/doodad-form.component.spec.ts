@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { DoodadFormComponent } from './doodad-form.component';
+import { DoodadFormComponent } from "./doodad-form.component";
 
-describe('DoodadFormComponent', () => {
+describe("DoodadFormComponent", () => {
   let component: DoodadFormComponent;
   let fixture: ComponentFixture<DoodadFormComponent>;
 
@@ -19,7 +19,7 @@ describe('DoodadFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

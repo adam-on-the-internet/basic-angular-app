@@ -6,8 +6,8 @@ import { ROUTES_ENUM } from "./constants/routing.constants";
 import { FormSampleComponent } from "./components/form-sample/form-sample.component";
 import { WidgetOverviewComponent } from "./components/widget-overview/widget-overview.component";
 import { DoodadOverviewComponent } from "./components/doodad-overview/doodad-overview.component";
-import { WidgetFormComponent } from './components/widget-form/widget-form.component';
-import { DoodadFormComponent } from './components/doodad-form/doodad-form.component';
+import { WidgetFormComponent } from "./components/widget-form/widget-form.component";
+import { DoodadFormComponent } from "./components/doodad-form/doodad-form.component";
 
 const routes: Routes = [
   { path: ROUTES_ENUM.Dashboard, component: DashboardComponent },

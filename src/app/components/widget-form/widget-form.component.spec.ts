@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WidgetFormComponent } from './widget-form.component';
+import { WidgetFormComponent } from "./widget-form.component";
 
-describe('WidgetFormComponent', () => {
+describe("WidgetFormComponent", () => {
   let component: WidgetFormComponent;
   let fixture: ComponentFixture<WidgetFormComponent>;
 
@@ -19,7 +19,7 @@ describe('WidgetFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

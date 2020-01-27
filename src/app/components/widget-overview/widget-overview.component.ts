@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { WidgetService } from "src/app/services/widget.service";
-import { WidgetResource } from "src/app/models/Widget.model";
+import { WidgetResource, Widget } from "src/app/models/Widget.model";
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
   selector: "app-widget-overview",
@@ -17,10 +18,19 @@ export class WidgetOverviewComponent implements OnInit {
 
   constructor(
     private widgetService: WidgetService,
+    private navHelper: NavHelperService,
   ) { }
 
   public ngOnInit() {
     this.loadWidgets();
+  }
+
+  public createWiget(): void {
+    this.navHelper.goToWidgetCreateForm();
+  }
+
+  public editWidget(widget: Widget): void {
+    this.navHelper.goToWidgetEditForm(widget._id);
   }
 
   private loadWidgets(): void {

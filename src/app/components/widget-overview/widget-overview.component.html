@@ -7,6 +7,9 @@
   <p>
     Here are widgets loaded from my Basic Express App.
   </p>
+  <button (click)="createWiget()">
+    Create Widget
+  </button>
   <ng-container *ngIf="ready; else notReady">
     <ng-container *ngFor="let widget of widgetResource.widgets">
       <app-widget-display [widget]="widget"></app-widget-display>

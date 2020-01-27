@@ -7,6 +7,9 @@
   <p>
     Here are doodads loaded from my Basic Express App and Basic Mongo Cluster.
   </p>
+  <button (click)="createDoodad()">
+    Create Doodad
+  </button>
   <ng-container *ngIf="ready; else notReady">
     <ng-container *ngFor="let doodad of doodadResource.doodads">
       <app-doodad-display [doodad]="doodad"></app-doodad-display>

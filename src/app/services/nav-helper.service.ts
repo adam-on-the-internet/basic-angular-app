@@ -31,8 +31,8 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.WidgetForm);
   }
 
-  public goToWidgetEditForm(widgetId: number): void {
-    this.goToRoutes([ROUTES_ENUM.WidgetForm, widgetId.toString()]);
+  public goToWidgetEditForm(widgetId: string): void {
+    this.goToRoutes([ROUTES_ENUM.WidgetForm, widgetId]);
   }
 
   public goToDoodadOverview(): void {
@@ -43,8 +43,8 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.DoodadForm);
   }
 
-  public goToDoodadEditForm(doodadId: number): void {
-    this.goToRoutes([ROUTES_ENUM.DoodadForm, doodadId.toString()]);
+  public goToDoodadEditForm(doodadId: string): void {
+    this.goToRoutes([ROUTES_ENUM.DoodadForm, doodadId]);
   }
 
   private goToRoute(route: string): void {

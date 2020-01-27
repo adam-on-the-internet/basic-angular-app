@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { DoodadResource } from "src/app/models/Doodad.model";
+import { DoodadResource, Doodad } from "src/app/models/Doodad.model";
 import { DoodadService } from "../../services/doodad.service";
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
   selector: "app-doodad-overview",
@@ -17,10 +18,19 @@ export class DoodadOverviewComponent implements OnInit {
 
   constructor(
     private doodadService: DoodadService,
+    private navHelper: NavHelperService,
   ) { }
 
   public ngOnInit() {
     this.loadDoodads();
+  }
+
+  public createDoodad(): void {
+    this.navHelper.goToDoodadCreateForm();
+  }
+
+  public editDoodad(doodad: Doodad): void {
+    this.navHelper.goToDoodadEditForm(doodad._id);
   }
 
   private loadDoodads(): void {
