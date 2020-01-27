@@ -1,1 +1,13 @@
-<p>widget-form works!</p>
+<ng-container *ngIf="ready; else notReady">
+  <h1>
+    <span *ngIf="editMode">Edit Widget</span>
+    <span *ngIf="!editMode">Create Widget</span>
+  </h1>
+  <p>
+    {{ widget | json }}
+  </p>
+</ng-container>
+
+<ng-template #notReady>
+  <p>Loading...</p>
+</ng-template>

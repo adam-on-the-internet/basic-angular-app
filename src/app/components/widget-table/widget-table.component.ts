@@ -25,7 +25,7 @@ export class WidgetTableComponent implements OnInit {
     this.loadWidgets();
   }
 
-  public createWiget(): void {
+  public createWidget(): void {
     this.navHelper.goToWidgetCreateForm();
   }
 
