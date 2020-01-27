@@ -12,22 +12,46 @@ export class NavHelperService {
   ) { }
 
   public goToDashboard(): void {
-    this.router.navigate([ROUTES_ENUM.Dashboard]);
+    this.goToRoute(ROUTES_ENUM.Dashboard);
   }
 
   public goToInfo(): void {
-    this.router.navigate([ROUTES_ENUM.Info]);
+    this.goToRoute(ROUTES_ENUM.Info);
   }
 
   public goToFormSample(): void {
-    this.router.navigate([ROUTES_ENUM.FormSample]);
+    this.goToRoute(ROUTES_ENUM.FormSample);
   }
 
   public goToWidgetOverview(): void {
-    this.router.navigate([ROUTES_ENUM.WidgetOverview]);
+    this.goToRoute(ROUTES_ENUM.WidgetOverview);
+  }
+
+  public goToWidgetCreateForm(): void {
+    this.goToRoute(ROUTES_ENUM.WidgetForm);
+  }
+
+  public goToWidgetEditForm(widgetId: number): void {
+    this.goToRoutes([ROUTES_ENUM.WidgetForm, widgetId.toString()]);
   }
 
   public goToDoodadOverview(): void {
-    this.router.navigate([ROUTES_ENUM.DoodadOverview]);
+    this.goToRoute(ROUTES_ENUM.DoodadOverview);
+  }
+
+  public goToDoodadCreateForm(): void {
+    this.goToRoute(ROUTES_ENUM.DoodadForm);
+  }
+
+  public goToDoodadEditForm(doodadId: number): void {
+    this.goToRoutes([ROUTES_ENUM.DoodadForm, doodadId.toString()]);
+  }
+
+  private goToRoute(route: string): void {
+    this.goToRoutes([route]);
+  }
+
+  private goToRoutes(routes: string[]): void {
+    this.router.navigate(routes);
   }
 }
