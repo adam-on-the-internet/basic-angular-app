@@ -29,6 +29,10 @@ export class WidgetTableComponent implements OnInit {
     this.navHelper.goToWidgetCreateForm();
   }
 
+  public widgetDetails(widget: Widget): void {
+    this.navHelper.goToWidgetDetails(widget._id);
+  }
+
   public editWidget(widget: Widget): void {
     this.navHelper.goToWidgetEditForm(widget._id);
   }

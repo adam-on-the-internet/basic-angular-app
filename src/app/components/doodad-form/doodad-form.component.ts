@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
 import { Doodad } from "src/app/models/Doodad.model";
-import { DoodadService } from 'src/app/services/doodad.service';
+import { DoodadService } from "src/app/services/doodad.service";
 
 @Component({
   selector: "app-doodad-form",

@@ -14,7 +14,7 @@
     <tbody>
       <tr *ngFor="let doodad of doodadResource.doodads">
         <td>{{ doodad.name }}</td>
-        <td><button disabled>Details</button></td>
+        <td><button (click)="doodadDetails(doodad)">Details</button></td>
         <td><button (click)="editDoodad(doodad)">Edit</button></td>
         <td><button (click)="requestDelete(doodad)">Delete</button></td>
       </tr>

@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
 import { Widget } from "src/app/models/Widget.model";
-import { WidgetService } from 'src/app/services/widget.service';
+import { WidgetService } from "src/app/services/widget.service";
 
 @Component({
   selector: "app-widget-form",

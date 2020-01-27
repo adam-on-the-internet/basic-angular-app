@@ -25,6 +25,10 @@ export class DoodadTableComponent implements OnInit {
     this.loadDoodads();
   }
 
+  public doodadDetails(doodad: Doodad): void {
+    this.navHelper.goToDoodadDetails(doodad._id);
+  }
+
   public createDoodad(): void {
     this.navHelper.goToDoodadCreateForm();
   }

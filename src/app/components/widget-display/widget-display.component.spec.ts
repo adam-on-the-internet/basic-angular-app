@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { WidgetDisplayComponent } from "./widget-display.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe("WidgetDisplayComponent", () => {
   let component: WidgetDisplayComponent;
@@ -8,9 +10,10 @@ describe("WidgetDisplayComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WidgetDisplayComponent ]
+      declarations: [WidgetDisplayComponent],
+      imports: [HttpClientTestingModule, RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
