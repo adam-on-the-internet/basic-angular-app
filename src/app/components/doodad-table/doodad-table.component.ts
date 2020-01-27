@@ -33,6 +33,23 @@ export class DoodadTableComponent implements OnInit {
     this.navHelper.goToDoodadEditForm(doodad._id);
   }
 
+  public requestDelete(doodad: Doodad): void {
+    const confirmDelete = confirm(`Are you sure you want to delete ${doodad.name}?`);
+    if (confirmDelete) {
+      this.deleteDoodad(doodad);
+    }
+  }
+
+  private deleteDoodad(doodad: Doodad): void {
+    this.doodadService.deleteDoodad(doodad._id)
+      .subscribe((res) => this.doodadResource = res,
+        (error) => {
+          console.log("delete doodad failed");
+        }, () => {
+          this.loadDoodads();
+        });
+  }
+
   private loadDoodads(): void {
     this.doodadResource = null;
     this.error = false;

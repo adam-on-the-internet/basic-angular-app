@@ -4,7 +4,8 @@ export abstract class RestUrlBuilder {
   public static buildRestUrl(endpoint: Endpoint): string {
     const serviceString = this.getServiceString(endpoint);
     const controllerString = this.getControllerString(endpoint);
-    return serviceString + controllerString;
+    const paramString = this.getParamString(endpoint);
+    return serviceString + controllerString + paramString;
   }
 
   private static getServiceString(endpoint: Endpoint): string {
