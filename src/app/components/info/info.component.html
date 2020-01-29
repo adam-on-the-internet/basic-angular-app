@@ -5,11 +5,8 @@
 </div>
 <div class="content">
   <p>
-    This is a basic angular app that has the following features:
+    This is a basic angular app.
   </p>
-  <ul>
-    <li>Routing (with navbar)</li>
-  </ul>
   <p>
     This repo can be found on github at
     <a target="_blank" href="https://github.com/upandatom96/basic-angular-app">
@@ -17,4 +14,8 @@
     </a>
     .
   </p>
+  <app-actuator-report
+    [serviceUrl]="basicExpressServiceUrl"
+    [serviceName]="'Basic Express Service'"
+  ></app-actuator-report>
 </div>

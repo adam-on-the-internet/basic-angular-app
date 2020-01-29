@@ -1,0 +1,7 @@
+<ng-container *ngIf="ready; else loading">
+  Status of {{ serviceName }}: {{ status.status }}
+</ng-container>
+
+<ng-template #loading>
+  <p>Checking status...</p>
+</ng-template>

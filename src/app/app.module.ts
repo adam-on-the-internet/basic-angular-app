@@ -18,6 +18,7 @@ import { WidgetFormComponent } from "./components/widget-form/widget-form.compon
 import { DoodadFormComponent } from "./components/doodad-form/doodad-form.component";
 import { DoodadTableComponent } from "./components/doodad-table/doodad-table.component";
 import { WidgetTableComponent } from "./components/widget-table/widget-table.component";
+import { ActuatorReportComponent } from "./components/actuator-report/actuator-report.component";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { WidgetTableComponent } from "./components/widget-table/widget-table.com
     WidgetFormComponent,
     DoodadFormComponent,
     DoodadTableComponent,
-    WidgetTableComponent
+    WidgetTableComponent,
+    ActuatorReportComponent
   ],
   imports: [
     BrowserModule,

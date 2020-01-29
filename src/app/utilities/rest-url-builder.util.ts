@@ -5,7 +5,8 @@ export abstract class RestUrlBuilder {
     const serviceString = this.getServiceString(endpoint);
     const controllerString = this.getControllerString(endpoint);
     const paramString = this.getParamString(endpoint);
-    return serviceString + controllerString + paramString;
+    const collectionString = this.getCollectionString(endpoint);
+    return serviceString + controllerString + paramString + collectionString;
   }
 
   private static getServiceString(endpoint: Endpoint): string {
@@ -27,6 +28,14 @@ export abstract class RestUrlBuilder {
   private static getParamString(endpoint: Endpoint): string {
     if (endpoint.params) {
       return "/" + endpoint.params;
+    } else {
+      return "";
+    }
+  }
+
+  private static getCollectionString(endpoint: Endpoint): string {
+    if (endpoint.collection) {
+      return "/" + endpoint.collection;
     } else {
       return "";
     }
