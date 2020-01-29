@@ -1,7 +1,17 @@
-<ng-container *ngIf="ready; else loading">
-  Status of {{ serviceName }}: {{ status.status }}
+<ng-container *ngIf="showReport; else error">
+  <p>
+    Status of {{ serviceName }}:
+    <ng-container *ngIf="ready; else loading">
+      {{ status.status }}
+      <a (click)="checkActuator()">(click here to refresh)</a>
+    </ng-container>
+  </p>
 </ng-container>
 
 <ng-template #loading>
-  <p>Checking status...</p>
+  <span>Checking status...</span>
+</ng-template>
+
+<ng-template #error>
+  <p>This actuator report is setup incorrectly!</p>
 </ng-template>
