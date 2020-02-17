@@ -31,7 +31,7 @@ export class RegisterComponent {
   public submit() {
     this.showErrors = true;
     if (this.valid) {
-      console.log("logging in...");
+      console.log("registering...");
     }
   }
 
