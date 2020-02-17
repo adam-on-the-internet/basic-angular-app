@@ -5,6 +5,7 @@
   <span (click)="goToDoodadOverview()">doodads</span> //
   <ng-container *ngIf="isLoggedIn">
     <span (click)="logout()">logout</span> //
+    <span>Hello, {{ userEmail }}</span>
   </ng-container>
   <ng-container *ngIf="!isLoggedIn">
     <span (click)="goToRegister()">register</span> //
