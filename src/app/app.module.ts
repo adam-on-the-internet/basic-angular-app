@@ -9,7 +9,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HttpClientModule } from "@angular/common/http";
-import { FormSampleComponent } from "./components/form-sample/form-sample.component";
 import { WidgetDisplayComponent } from "./components/widget-display/widget-display.component";
 import { WidgetOverviewComponent } from "./components/widget-overview/widget-overview.component";
 import { DoodadOverviewComponent } from "./components/doodad-overview/doodad-overview.component";
@@ -27,7 +26,6 @@ import { ActuatorReportComponent } from "./components/actuator-report/actuator-r
     InfoComponent,
     NavbarComponent,
     FooterComponent,
-    FormSampleComponent,
     WidgetDisplayComponent,
     WidgetOverviewComponent,
     DoodadOverviewComponent,

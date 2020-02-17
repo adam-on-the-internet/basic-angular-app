@@ -19,10 +19,6 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Info);
   }
 
-  public goToFormSample(): void {
-    this.goToRoute(ROUTES_ENUM.FormSample);
-  }
-
   public goToWidgetOverview(): void {
     this.goToRoute(ROUTES_ENUM.WidgetOverview);
   }

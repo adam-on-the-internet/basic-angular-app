@@ -20,10 +20,6 @@ export class NavbarComponent {
     this.navHelper.goToInfo();
   }
 
-  public goToFormSample(): void {
-    this.navHelper.goToFormSample();
-  }
-
   public goToWidgetOverview(): void {
     this.navHelper.goToWidgetOverview();
   }
