@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { ContraptionResource, Contraption } from 'src/app/models/Contraption.model';
-import { NavHelperService } from 'src/app/services/nav-helper.service';
-import { ContraptionService } from 'src/app/services/contraption.service';
-import { CookieHelper } from 'src/app/utilities/cookie.util';
+import { ContraptionResource, Contraption } from "src/app/models/Contraption.model";
+import { NavHelperService } from "src/app/services/nav-helper.service";
+import { ContraptionService } from "src/app/services/contraption.service";
+import { CookieHelper } from "src/app/utilities/cookie.util";
 
 @Component({
   selector: "app-contraption-table",

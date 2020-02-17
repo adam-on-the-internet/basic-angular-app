@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ContraptionTableComponent } from "./contraption-table.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe("ContraptionTableComponent", () => {
   let component: ContraptionTableComponent;
@@ -8,9 +10,10 @@ describe("ContraptionTableComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContraptionTableComponent ]
+      declarations: [ContraptionTableComponent],
+      imports: [HttpClientTestingModule, RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

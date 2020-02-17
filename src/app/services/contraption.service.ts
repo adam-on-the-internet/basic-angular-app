@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import { CookieHelper } from "../utilities/cookie.util";
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { ContraptionResource, Contraption } from '../models/Contraption.model';
-import { RestUrlBuilder } from '../utilities/rest-url-builder.util';
-import { ServiceUrl } from '../constants/rest.constants';
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { ContraptionResource, Contraption } from "../models/Contraption.model";
+import { RestUrlBuilder } from "../utilities/rest-url-builder.util";
+import { ServiceUrl } from "../constants/rest.constants";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ContraptionService {
   constructor(

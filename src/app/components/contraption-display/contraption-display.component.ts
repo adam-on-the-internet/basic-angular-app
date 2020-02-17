@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Contraption } from 'src/app/models/Contraption.model';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
-import { ContraptionService } from 'src/app/services/contraption.service';
-import { ActivatedRoute } from '@angular/router';
+import { Contraption } from "src/app/models/Contraption.model";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { ContraptionService } from "src/app/services/contraption.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-contraption-display",
