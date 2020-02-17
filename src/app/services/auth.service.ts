@@ -25,7 +25,7 @@ export class AuthService {
       email,
       password
     };
-    return this.http.post(url, user, CookieHelper.headers())
+    return this.http.post(url, user)
       .pipe(
         map((res) => {
           const tokenResponse = res as TokenResponse;

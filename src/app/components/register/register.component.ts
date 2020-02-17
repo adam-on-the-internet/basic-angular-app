@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { NavHelperService } from "src/app/services/nav-helper.service";
+import { UserService } from "src/app/services/user.service";
 
 @Component({
   selector: "app-register",
@@ -28,11 +30,27 @@ export class RegisterComponent {
     return !BooleanHelper.hasValue(this.email);
   }
 
+  constructor(
+    private userService: UserService,
+    private navHelper: NavHelperService,
+  ) { }
+
   public submit() {
     this.showErrors = true;
     if (this.valid) {
-      console.log("registering...");
+      this.register();
     }
+  }
+
+  private register() {
+    let response;
+    this.userService.register(this.email)
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log("register failed");
+        }, () => {
+          this.navHelper.goToDashboard();
+        });
   }
 
 }
