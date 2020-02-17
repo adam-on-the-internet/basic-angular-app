@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { AuthService } from "src/app/services/auth.service";
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
   selector: "app-login",
@@ -35,11 +37,27 @@ export class LoginComponent {
     return !BooleanHelper.hasValue(this.password);
   }
 
+  constructor(
+    private authService: AuthService,
+    private navHelper: NavHelperService,
+  ) { }
+
   public submit() {
     this.showErrors = true;
     if (this.valid) {
-      console.log("logging in...");
+      this.login();
     }
+  }
+
+  private login() {
+    let response;
+    this.authService.login(this.email, this.password)
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log("login failed");
+        }, () => {
+          this.navHelper.goToDashboard();
+        });
   }
 
 }
