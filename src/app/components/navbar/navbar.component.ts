@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { NavHelperService } from "src/app/services/nav-helper.service";
+import { CookieHelper } from "src/app/utilities/cookie.util";
 
 @Component({
   selector: "app-navbar",
@@ -7,6 +8,10 @@ import { NavHelperService } from "src/app/services/nav-helper.service";
   styleUrls: ["./navbar.component.css"]
 })
 export class NavbarComponent {
+
+  public get isLoggedIn(): boolean {
+    return CookieHelper.isLoggedOn();
+  }
 
   constructor(
     private navHelper: NavHelperService,
@@ -34,5 +39,10 @@ export class NavbarComponent {
 
   public goToDoodadOverview(): void {
     this.navHelper.goToDoodadOverview();
+  }
+
+  public logout(): void {
+    CookieHelper.removeToken();
+    this.navHelper.goToLogin();
   }
 }

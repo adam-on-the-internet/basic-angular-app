@@ -3,7 +3,12 @@
   <span (click)="goToInfo()">info</span> //
   <span (click)="goToWidgetOverview()">widgets</span> //
   <span (click)="goToDoodadOverview()">doodads</span> //
-  <span (click)="goToLogin()">login</span> //
-  <span (click)="goToRegister()">register</span> //
+  <ng-container *ngIf="isLoggedIn">
+    <span (click)="logout()">logout</span> //
+  </ng-container>
+  <ng-container *ngIf="!isLoggedIn">
+    <span (click)="goToRegister()">register</span> //
+    <span (click)="goToLogin()">login</span> //
+  </ng-container>
 </p>
 <hr />
