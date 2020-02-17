@@ -24,6 +24,10 @@ export class NavbarComponent {
     this.navHelper.goToLogin();
   }
 
+  public goToRegister(): void {
+    this.navHelper.goToRegister();
+  }
+
   public goToWidgetOverview(): void {
     this.navHelper.goToWidgetOverview();
   }

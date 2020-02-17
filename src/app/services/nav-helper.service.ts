@@ -23,6 +23,10 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Login);
   }
 
+  public goToRegister(): void {
+    this.goToRoute(ROUTES_ENUM.Register);
+  }
+
   public goToWidgetOverview(): void {
     this.goToRoute(ROUTES_ENUM.WidgetOverview);
   }

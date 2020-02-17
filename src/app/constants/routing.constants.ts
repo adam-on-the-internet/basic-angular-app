@@ -8,4 +8,5 @@ export const enum ROUTES_ENUM {
   DoodadDetails = "doodad-details",
   DoodadForm = "doodad-form",
   Login = "login",
+  Register = "register",
 }

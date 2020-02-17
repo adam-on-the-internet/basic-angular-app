@@ -10,11 +10,13 @@ import { DoodadFormComponent } from "./components/doodad-form/doodad-form.compon
 import { WidgetDisplayComponent } from "./components/widget-display/widget-display.component";
 import { DoodadDisplayComponent } from "./components/doodad-display/doodad-display.component";
 import { LoginComponent } from "./components/login/login.component";
+import { RegisterComponent } from "./components/register/register.component";
 
 const routes: Routes = [
   { path: ROUTES_ENUM.Dashboard, component: DashboardComponent },
   { path: ROUTES_ENUM.Info, component: InfoComponent },
   { path: ROUTES_ENUM.Login, component: LoginComponent },
+  { path: ROUTES_ENUM.Register, component: RegisterComponent },
   { path: ROUTES_ENUM.WidgetOverview, component: WidgetOverviewComponent },
   { path: ROUTES_ENUM.WidgetDetails + "/:id", component: WidgetDisplayComponent },
   { path: ROUTES_ENUM.WidgetForm, component: WidgetFormComponent },

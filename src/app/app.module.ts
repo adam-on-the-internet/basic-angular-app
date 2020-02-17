@@ -19,6 +19,7 @@ import { DoodadTableComponent } from "./components/doodad-table/doodad-table.com
 import { WidgetTableComponent } from "./components/widget-table/widget-table.component";
 import { ActuatorReportComponent } from "./components/actuator-report/actuator-report.component";
 import { LoginComponent } from "./components/login/login.component";
+import { RegisterComponent } from "./components/register/register.component";
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LoginComponent } from "./components/login/login.component";
     DoodadTableComponent,
     WidgetTableComponent,
     ActuatorReportComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
