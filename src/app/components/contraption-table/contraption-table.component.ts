@@ -14,7 +14,11 @@ export class ContraptionTableComponent implements OnInit {
   public error = false;
 
   public get canEdit(): boolean {
-    return CookieHelper.getUserDetails().admin;
+    if (CookieHelper.isLoggedOn) {
+      return CookieHelper.getUserDetails().admin;
+    } else {
+      return false;
+    }
   }
 
   public get ready(): boolean {
