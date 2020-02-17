@@ -36,7 +36,7 @@ export class ContraptionService {
       service: ServiceUrl.BasicExpress,
       controller: "contraption",
     });
-    return this.http.post(url, contraption, CookieHelper.headers()) as Observable<any>;
+    return this.http.post(url, contraption, CookieHelper.authHeaders) as Observable<any>;
   }
 
   public updateContraption(contraption: Contraption): Observable<any> {
@@ -44,7 +44,7 @@ export class ContraptionService {
       service: ServiceUrl.BasicExpress,
       controller: "contraption",
     });
-    return this.http.put(url, contraption, CookieHelper.headers()) as Observable<any>;
+    return this.http.put(url, contraption, CookieHelper.authHeaders) as Observable<any>;
   }
 
   public deleteContraption(contraptionId: string): Observable<any> {
@@ -53,6 +53,6 @@ export class ContraptionService {
       controller: "contraption",
       params: contraptionId,
     });
-    return this.http.delete(url, CookieHelper.headers()) as Observable<any>;
+    return this.http.delete(url, CookieHelper.authHeaders) as Observable<any>;
   }
 }

@@ -6,7 +6,8 @@
   <span (click)="goToContraptionOverview()">contraption</span> //
   <ng-container *ngIf="isLoggedIn">
     <span (click)="logout()">logout</span> //
-    <span>Hello, {{ userEmail }}</span>
+    <span>Hello, {{ userEmail }}</span> //
+    <span *ngIf="isAdmin">(ADMIN) //</span>
   </ng-container>
   <ng-container *ngIf="!isLoggedIn">
     <span (click)="goToRegister()">register</span> //

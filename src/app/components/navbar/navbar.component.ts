@@ -13,6 +13,10 @@ export class NavbarComponent {
     return CookieHelper.isLoggedOn();
   }
 
+  public get isAdmin(): boolean {
+    return CookieHelper.getUserDetails().admin;
+  }
+
   public get userEmail(): string {
     if (this.isLoggedIn) {
       return CookieHelper.getUserDetails().email;

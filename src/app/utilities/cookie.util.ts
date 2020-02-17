@@ -3,9 +3,22 @@ import { HttpHeaders } from "@angular/common/http";
 
 export abstract class CookieHelper {
 
-  public static headers() {
+  public static get unauthHeaders() {
     const headers = new HttpHeaders()
       .set("Content-Type", "application/json");
+    return {
+      headers,
+    };
+  }
+
+  public static get bearerToken(): string {
+    return `Bearer ${CookieHelper.getToken()}`;
+  }
+
+  public static get authHeaders() {
+    const headers = new HttpHeaders()
+      .set("Content-Type", "application/json")
+      .set("Authorization", CookieHelper.bearerToken);
     return {
       headers,
     };
