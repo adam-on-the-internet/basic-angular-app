@@ -1,6 +1,9 @@
 export const enum ROUTES_ENUM {
   Dashboard = "dashboard",
   Info = "info",
+  ContraptionOverview = "contraption-overview",
+  ContraptionDetails = "contraption-details",
+  ContraptionForm = "contraption-form",
   WidgetOverview = "widget-overview",
   WidgetDetails = "widget-details",
   WidgetForm = "widget-form",

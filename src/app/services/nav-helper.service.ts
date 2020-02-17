@@ -27,6 +27,22 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Register);
   }
 
+  public goToContraptionOverview(): void {
+    this.goToRoute(ROUTES_ENUM.ContraptionOverview);
+  }
+
+  public goToContraptionDetails(contraptionId: string): void {
+    this.goToRoutes([ROUTES_ENUM.ContraptionDetails, contraptionId]);
+  }
+
+  public goToContraptionCreateForm(): void {
+    this.goToRoute(ROUTES_ENUM.ContraptionForm);
+  }
+
+  public goToContraptionEditForm(contraptionId: string): void {
+    this.goToRoutes([ROUTES_ENUM.ContraptionForm, contraptionId]);
+  }
+
   public goToWidgetOverview(): void {
     this.goToRoute(ROUTES_ENUM.WidgetOverview);
   }

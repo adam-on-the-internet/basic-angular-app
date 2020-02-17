@@ -41,6 +41,10 @@ export class NavbarComponent {
     this.navHelper.goToRegister();
   }
 
+  public goToContraptionOverview(): void {
+    this.navHelper.goToContraptionOverview();
+  }
+
   public goToWidgetOverview(): void {
     this.navHelper.goToWidgetOverview();
   }

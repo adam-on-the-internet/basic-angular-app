@@ -20,6 +20,10 @@ import { WidgetTableComponent } from "./components/widget-table/widget-table.com
 import { ActuatorReportComponent } from "./components/actuator-report/actuator-report.component";
 import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
+import { ContraptionDisplayComponent } from "./components/contraption-display/contraption-display.component";
+import { ContraptionFormComponent } from "./components/contraption-form/contraption-form.component";
+import { ContraptionOverviewComponent } from "./components/contraption-overview/contraption-overview.component";
+import { ContraptionTableComponent } from "./components/contraption-table/contraption-table.component";
 
 @NgModule({
   declarations: [
@@ -38,7 +42,11 @@ import { RegisterComponent } from "./components/register/register.component";
     WidgetTableComponent,
     ActuatorReportComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContraptionDisplayComponent,
+    ContraptionFormComponent,
+    ContraptionOverviewComponent,
+    ContraptionTableComponent
   ],
   imports: [
     BrowserModule,

@@ -11,20 +11,32 @@ import { WidgetDisplayComponent } from "./components/widget-display/widget-displ
 import { DoodadDisplayComponent } from "./components/doodad-display/doodad-display.component";
 import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
+import { ContraptionOverviewComponent } from "./components/contraption-overview/contraption-overview.component";
+import { ContraptionDisplayComponent } from "./components/contraption-display/contraption-display.component";
+import { ContraptionFormComponent } from "./components/contraption-form/contraption-form.component";
 
 const routes: Routes = [
+  // main
   { path: ROUTES_ENUM.Dashboard, component: DashboardComponent },
   { path: ROUTES_ENUM.Info, component: InfoComponent },
   { path: ROUTES_ENUM.Login, component: LoginComponent },
   { path: ROUTES_ENUM.Register, component: RegisterComponent },
+  // contraption
+  { path: ROUTES_ENUM.ContraptionOverview, component: ContraptionOverviewComponent },
+  { path: ROUTES_ENUM.ContraptionDetails + "/:id", component: ContraptionDisplayComponent },
+  { path: ROUTES_ENUM.ContraptionForm, component: ContraptionFormComponent },
+  { path: ROUTES_ENUM.ContraptionForm + "/:id", component: ContraptionFormComponent },
+  // widget
   { path: ROUTES_ENUM.WidgetOverview, component: WidgetOverviewComponent },
   { path: ROUTES_ENUM.WidgetDetails + "/:id", component: WidgetDisplayComponent },
   { path: ROUTES_ENUM.WidgetForm, component: WidgetFormComponent },
   { path: ROUTES_ENUM.WidgetForm + "/:id", component: WidgetFormComponent },
+  // doodad
   { path: ROUTES_ENUM.DoodadOverview, component: DoodadOverviewComponent },
   { path: ROUTES_ENUM.DoodadDetails + "/:id", component: DoodadDisplayComponent },
   { path: ROUTES_ENUM.DoodadForm, component: DoodadFormComponent },
   { path: ROUTES_ENUM.DoodadForm + "/:id", component: DoodadFormComponent },
+  // default
   { path: "**", redirectTo: "dashboard" },
 ];
 
