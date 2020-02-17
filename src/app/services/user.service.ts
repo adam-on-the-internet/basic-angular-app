@@ -12,7 +12,6 @@ export class UserService {
     private http: HttpClient,
   ) { }
 
-
   public register(email: string): Observable<any> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
@@ -23,5 +22,17 @@ export class UserService {
       email
     };
     return this.http.post(url, user);
+  }
+
+  public resetPasswordAutomatic(email: string): Observable<any> {
+    const url = RestUrlBuilder.buildRestUrl({
+      service: ServiceUrl.BasicExpress,
+      controller: "user",
+      collection: "passwordReset/automatic"
+    });
+    const user = {
+      email
+    };
+    return this.http.put(url, user);
   }
 }

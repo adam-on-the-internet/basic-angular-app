@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
 import { AuthService } from "src/app/services/auth.service";
 import { NavHelperService } from "src/app/services/nav-helper.service";
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: "app-login",
@@ -39,6 +40,7 @@ export class LoginComponent {
 
   constructor(
     private authService: AuthService,
+    private userService: UserService,
     private navHelper: NavHelperService,
   ) { }
 
@@ -47,6 +49,17 @@ export class LoginComponent {
     if (this.valid) {
       this.login();
     }
+  }
+
+  public resetPassword() {
+    let response;
+    this.userService.resetPasswordAutomatic(this.email)
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log("reset failed");
+        }, () => {
+          console.log("reset success");
+        });
   }
 
   private login() {
