@@ -7,4 +7,5 @@ export const enum ROUTES_ENUM {
   DoodadOverview = "doodad-overview",
   DoodadDetails = "doodad-details",
   DoodadForm = "doodad-form",
+  Login = "login",
 }
