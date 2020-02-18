@@ -48,7 +48,7 @@ export abstract class CookieHelper {
     }
   }
 
-  public static isLoggedOn(): boolean {
+  public static get isLoggedOn(): boolean {
     const user = CookieHelper.getUserDetails();
     if (user) {
       return user.exp > Date.now() / 1000;

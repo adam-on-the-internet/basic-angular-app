@@ -10,7 +10,7 @@ import { CookieHelper } from "src/app/utilities/cookie.util";
 export class NavbarComponent {
 
   public get isLoggedIn(): boolean {
-    return CookieHelper.isLoggedOn();
+    return CookieHelper.isLoggedOn;
   }
 
   public get isAdmin(): boolean {

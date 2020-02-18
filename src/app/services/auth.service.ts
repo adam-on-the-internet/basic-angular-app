@@ -30,7 +30,7 @@ export class AuthService {
         map((res) => {
           const tokenResponse = res as TokenResponse;
           CookieHelper.saveToken(tokenResponse.token);
-          return CookieHelper.isLoggedOn();
+          return CookieHelper.isLoggedOn;
         })
       );
   }
