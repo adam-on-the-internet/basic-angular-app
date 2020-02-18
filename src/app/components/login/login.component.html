@@ -32,7 +32,7 @@
     </button>
     <br />
     <br />
-    <button (click)="resetPassword()">
+    <button (click)="resetPassword()" [disabled]="!email">
       Forgot password? Send reset email.
     </button>
   </form>

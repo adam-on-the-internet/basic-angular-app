@@ -52,6 +52,13 @@ export class LoginComponent {
   }
 
   public resetPassword() {
+    const confirmReset = confirm(`Are you sure you want to reset the password for ${this.email}?`);
+    if (confirmReset) {
+      this.performReset();
+    }
+  }
+
+  private performReset() {
     let response;
     this.userService.resetPasswordAutomatic(this.email)
       .subscribe((res) => response = res,
@@ -69,7 +76,7 @@ export class LoginComponent {
         (error) => {
           console.log("login failed");
         }, () => {
-          this.navHelper.goToDashboard();
+          this.navHelper.goToProfile();
         });
   }
 
