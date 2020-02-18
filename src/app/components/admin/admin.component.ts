@@ -44,15 +44,10 @@ export class AdminComponent implements OnInit {
   }
 
   public deleteUser(user: User) {
-    let response;
-    this.userService.deleteUser(user._id)
-      .subscribe((res) => response = res,
-        (error) => {
-          console.log(error);
-          console.log("delete user failed");
-        }, () => {
-          this.loadUsers();
-        });
+    const confirmDelete = confirm(`Are you sure you want to delete ${user.email}?`);
+    if (confirmDelete) {
+      this.submitDelete(user);
+    }
   }
 
   private editAccess(user: User, newAccess: string) {
@@ -62,6 +57,18 @@ export class AdminComponent implements OnInit {
         (error) => {
           console.log(error);
           console.log("edit access failed");
+        }, () => {
+          this.loadUsers();
+        });
+  }
+
+  private submitDelete(user: User) {
+    let response;
+    this.userService.deleteUser(user._id)
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log(error);
+          console.log("delete user failed");
         }, () => {
           this.loadUsers();
         });

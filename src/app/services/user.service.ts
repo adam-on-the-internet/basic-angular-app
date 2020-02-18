@@ -100,8 +100,9 @@ export class UserService {
   public deleteUser(id: string): Observable<any> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
-      controller: "user/" + id,
+      controller: "user",
+      collection: id
     });
-    return this.http.put(url, CookieHelper.authHeaders);
+    return this.http.delete(url, CookieHelper.authHeaders);
   }
 }
