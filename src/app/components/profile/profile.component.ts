@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { CookieHelper } from 'src/app/utilities/cookie.util';
+import { CookieHelper } from "src/app/utilities/cookie.util";
 
 @Component({
   selector: "app-profile",

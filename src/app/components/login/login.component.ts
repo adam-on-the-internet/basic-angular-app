@@ -52,7 +52,7 @@ export class LoginComponent {
   }
 
   public resetPassword() {
-    const emailToReset = prompt('What email do you want to reset the password for?');
+    const emailToReset = prompt("What email do you want to reset the password for?");
     if (emailToReset) {
       this.performReset(emailToReset);
     }
