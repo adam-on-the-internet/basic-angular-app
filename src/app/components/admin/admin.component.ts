@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "src/app/services/user.service";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { User } from 'src/app/models/User.model';
 
 @Component({
   selector: "app-admin",
@@ -8,7 +9,7 @@ import { BooleanHelper } from "src/app/utilities/boolean.util";
   styleUrls: ["./admin.component.css"]
 })
 export class AdminComponent implements OnInit {
-  public users: any[] = null;
+  public users: User[] = null;
 
   public get ready(): boolean {
     return BooleanHelper.hasValue(this.users);
@@ -22,12 +23,56 @@ export class AdminComponent implements OnInit {
     this.loadUsers();
   }
 
+  public toggleAdmin(user: User) {
+    let dialogText;
+    if (user.admin) {
+      dialogText = `Are you sure you want to remove the admin rights for ${user.email}?`;
+    } else {
+      dialogText = `Are you sure you want to give admin rights to ${user.email}?`;
+    }
+    const confirmToggle = confirm(dialogText);
+    if (confirmToggle) {
+      this.submitToggleAdmin(user);
+    }
+  }
+
+  public setSpecialAccess(user: User) {
+    const newAccess = prompt(`Access is currently: ${user.specialAccess}. What would you like to change it to?`);
+    if (newAccess) {
+      this.editAccess(user, newAccess);
+    }
+  }
+
+  public delete(user: User) {
+
+  }
+
+  private editAccess(user: User, newAccess: string) {
+    this.userService.editAccess(user.email, newAccess)
+      .subscribe((res) => this.users = res,
+        (error) => {
+          console.log("edit access failed");
+        }, () => {
+          this.loadUsers();
+        });
+  }
+
+  private submitToggleAdmin(user: User) {
+    this.userService.setAdmin(user.email, !user.admin)
+      .subscribe((res) => this.users = res,
+        (error) => {
+          console.log("edit admin failed");
+        }, () => {
+          this.loadUsers();
+        });
+  }
+
   private loadUsers(): void {
     this.users = null;
     this.userService.getAllUsers()
       .subscribe((res) => this.users = res,
         (error) => {
-          console.log("get contraptions failed");
+          console.log("get users failed");
         });
   }
 

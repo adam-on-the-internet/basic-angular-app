@@ -9,8 +9,9 @@
       <tr>
         <th>Email</th>
         <th>Admin</th>
+        <th>Toggle Admin</th>
         <th>Special Access</th>
-        <th>Edit</th>
+        <th>Edit Access</th>
         <th>Delete</th>
       </tr>
     </thead>
@@ -18,9 +19,19 @@
       <tr *ngFor="let user of users">
         <td>{{ user.email }}</td>
         <td>{{ user.admin }}</td>
+        <td>
+          <button (click)="toggleAdmin(user)">
+            <span *ngIf="user.admin">
+              Remove admin rights
+            </span>
+            <span *ngIf="!user.admin">
+              Add admin rights
+            </span>
+          </button>
+        </td>
         <td>{{ user.specialAccess }}</td>
         <td>
-          <button disabled>Edit</button>
+          <button (click)="setSpecialAccess(user)">Edit access</button>
         </td>
         <td>
           <button disabled>
