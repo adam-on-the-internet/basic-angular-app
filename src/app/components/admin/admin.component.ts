@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "src/app/services/user.service";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
-import { User } from 'src/app/models/User.model';
+import { User } from "src/app/models/User.model";
 
 @Component({
   selector: "app-admin",
@@ -43,14 +43,24 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  public delete(user: User) {
-
+  public deleteUser(user: User) {
+    let response;
+    this.userService.deleteUser(user._id)
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log(error);
+          console.log("delete user failed");
+        }, () => {
+          this.loadUsers();
+        });
   }
 
   private editAccess(user: User, newAccess: string) {
+    let response;
     this.userService.editAccess(user.email, newAccess)
-      .subscribe((res) => this.users = res,
+      .subscribe((res) => response = res,
         (error) => {
+          console.log(error);
           console.log("edit access failed");
         }, () => {
           this.loadUsers();
@@ -58,9 +68,11 @@ export class AdminComponent implements OnInit {
   }
 
   private submitToggleAdmin(user: User) {
+    let response;
     this.userService.setAdmin(user.email, !user.admin)
-      .subscribe((res) => this.users = res,
+      .subscribe((res) => response = res,
         (error) => {
+          console.log(error);
           console.log("edit admin failed");
         }, () => {
           this.loadUsers();

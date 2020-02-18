@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { RestUrlBuilder } from "../utilities/rest-url-builder.util";
 import { ServiceUrl } from "../constants/rest.constants";
 import { CookieHelper } from "../utilities/cookie.util";
-import { User } from '../models/User.model';
+import { User } from "../models/User.model";
 
 @Injectable({
   providedIn: "root"
@@ -95,5 +95,13 @@ export class UserService {
       confirmPassword
     };
     return this.http.put(url, body, CookieHelper.authHeaders);
+  }
+
+  public deleteUser(id: string): Observable<any> {
+    const url = RestUrlBuilder.buildRestUrl({
+      service: ServiceUrl.BasicExpress,
+      controller: "user/" + id,
+    });
+    return this.http.put(url, CookieHelper.authHeaders);
   }
 }
