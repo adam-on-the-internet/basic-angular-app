@@ -13,6 +13,7 @@ export class LoginComponent {
   public email: string = null;
   public password: string = null;
 
+  public loginFailure = false;
   public showErrors = false;
 
   public get errors(): string[] {
@@ -74,7 +75,7 @@ export class LoginComponent {
     this.authService.login(this.email, this.password)
       .subscribe((res) => response = res,
         (error) => {
-          console.log("login failed");
+          this.loginFailure = true;
         }, () => {
           this.navHelper.goToProfile();
         });

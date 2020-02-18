@@ -4,6 +4,9 @@
   </h1>
 </div>
 <div class="content">
+  <p *ngIf="loginFailure">
+    Failed to login. Check your email and password.
+  </p>
   <form>
     <section id="email">
       Email:

@@ -48,4 +48,17 @@ export class UserService {
     };
     return this.http.put(url, user);
   }
+
+  public resetPasswordManual(password: string, confirmPassword: string): Observable<any> {
+    const url = RestUrlBuilder.buildRestUrl({
+      service: ServiceUrl.BasicExpress,
+      controller: "user",
+      collection: "passwordReset/manual"
+    });
+    const body = {
+      password,
+      confirmPassword
+    };
+    return this.http.put(url, body, CookieHelper.authHeaders);
+  }
 }

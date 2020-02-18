@@ -24,9 +24,28 @@ export class ProfileComponent {
     }
   }
 
+  public editPassword() {
+    const password = prompt("What new password do you want?");
+    const confirmPassword = prompt("Confirm your new password.");
+    if (password && password === confirmPassword) {
+      this.performPasswordUpdate(password, confirmPassword);
+    }
+  }
+
   private performEdit(emailToReset: string) {
     let response;
     this.userService.updateEmailSelf(emailToReset)
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log("edit failed");
+        }, () => {
+          console.log("edit success");
+        });
+  }
+
+  private performPasswordUpdate(password: string, confirmPassword: string) {
+    let response;
+    this.userService.resetPasswordManual(password, confirmPassword)
       .subscribe((res) => response = res,
         (error) => {
           console.log("edit failed");
