@@ -6,6 +6,7 @@ export interface UserDetails {
   iat: number;
   userId: string;
   authorized: boolean;
+  specialAccess: string;
   password?: string; // usually excluded
   text?: string;
 }

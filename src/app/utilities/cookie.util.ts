@@ -48,6 +48,30 @@ export abstract class CookieHelper {
     }
   }
 
+  public static get email(): string {
+    if (CookieHelper.isLoggedOn) {
+      return CookieHelper.getUserDetails().email;
+    } else {
+      return null;
+    }
+  }
+
+  public static get admin(): boolean {
+    if (CookieHelper.isLoggedOn) {
+      return CookieHelper.getUserDetails().admin;
+    } else {
+      return null;
+    }
+  }
+
+  public static get specialAccess(): string {
+    if (CookieHelper.isLoggedOn) {
+      return CookieHelper.getUserDetails().specialAccess;
+    } else {
+      return null;
+    }
+  }
+
   public static get isLoggedOn(): boolean {
     const user = CookieHelper.getUserDetails();
     if (user) {

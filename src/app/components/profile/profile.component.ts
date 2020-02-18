@@ -13,6 +13,18 @@ export class ProfileComponent {
     return CookieHelper.getUserDetails();
   }
 
+  public get email(): any {
+    return CookieHelper.email;
+  }
+
+  public get admin(): any {
+    return CookieHelper.admin;
+  }
+
+  public get specialAccess(): any {
+    return CookieHelper.specialAccess;
+  }
+
   constructor(
     private userService: UserService,
   ) { }
