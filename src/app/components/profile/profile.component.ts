@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { CookieHelper } from "src/app/utilities/cookie.util";
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from "src/app/services/user.service";
 
 @Component({
   selector: "app-profile",
