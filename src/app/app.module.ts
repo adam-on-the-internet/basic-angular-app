@@ -24,6 +24,8 @@ import { ContraptionDisplayComponent } from "./components/contraption-display/co
 import { ContraptionFormComponent } from "./components/contraption-form/contraption-form.component";
 import { ContraptionOverviewComponent } from "./components/contraption-overview/contraption-overview.component";
 import { ContraptionTableComponent } from "./components/contraption-table/contraption-table.component";
+import { ProfileComponent } from "./components/profile/profile.component";
+import { AdminComponent } from "./components/admin/admin.component";
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { ContraptionTableComponent } from "./components/contraption-table/contra
     ContraptionDisplayComponent,
     ContraptionFormComponent,
     ContraptionOverviewComponent,
-    ContraptionTableComponent
+    ContraptionTableComponent,
+    ProfileComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

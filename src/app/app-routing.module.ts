@@ -14,6 +14,8 @@ import { RegisterComponent } from "./components/register/register.component";
 import { ContraptionOverviewComponent } from "./components/contraption-overview/contraption-overview.component";
 import { ContraptionDisplayComponent } from "./components/contraption-display/contraption-display.component";
 import { ContraptionFormComponent } from "./components/contraption-form/contraption-form.component";
+import { ProfileComponent } from "./components/profile/profile.component";
+import { AdminComponent } from "./components/admin/admin.component";
 
 const routes: Routes = [
   // main
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: ROUTES_ENUM.Info, component: InfoComponent },
   { path: ROUTES_ENUM.Login, component: LoginComponent },
   { path: ROUTES_ENUM.Register, component: RegisterComponent },
+  { path: ROUTES_ENUM.Profile, component: ProfileComponent },
+  { path: ROUTES_ENUM.Admin, component: AdminComponent },
   // contraption
   { path: ROUTES_ENUM.ContraptionOverview, component: ContraptionOverviewComponent },
   { path: ROUTES_ENUM.ContraptionDetails + "/:id", component: ContraptionDisplayComponent },
