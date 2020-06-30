@@ -118,8 +118,13 @@
               "devServerTarget": "basic-angular-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "basic-angular-app"
 }
